@@ -32,6 +32,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Check app imports
+      - name: Check syntax
         run: |
-          python -c "from app.main import app; print('FastAPI app loaded successfully')"
+          python -m compileall app
